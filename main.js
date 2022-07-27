@@ -64,6 +64,7 @@ console.log(crewMember1)
 console.log(crewMember2)
 console.log(mav)
 console.log(hermes)
+console.log(jobTypes)
 
 
 
