@@ -9,11 +9,61 @@ const jobTypes = {
   programmer: 'Any Ship!'
 };
 
-// Your code will go here
+/** my code goes here:
+ CrewMember class **/
 
 
+class CrewMember {
+  constructor(name, job, specialSkill, ship) {
+    this.name = name;
+    this.job = job;
+    this.specialSkill = specialSkill;
+    this.ship = ship;
+  }
 
+  //can enter a ship
+// this creates a new Ship. Can you build a class that can be called so that this Ship can be built?
+  enterShip(ship) {
+    this.ship = ship;
+    this.ship.crew.push(this)
+  }
+}
 
+//Crew members (1 and 2)
+
+let crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry');
+//
+let crewMember2 = new CrewMember('Commander Lewis', 'Commander', 'geology');
+
+//Build a Class for your Ships
+
+class Ship {
+  constructor(name, type, ability) {
+    this.name = name;
+    this.type = type;
+    this.ability = ability;
+    this.crew = [];
+  }
+
+  //can return a mission statement correctly ability = mission statement
+  missionStatement() {
+    if(this.crew.length === 0) {
+      return "Can't perform a mission yet.";
+    } else {
+      return this.ability;
+    }
+  }
+}
+
+let mav = new Ship('Mars Ascent Vehicle', 'MAV', 'Ascend into low orbit');
+let hermes = new Ship('Hermes', 'Main Ship', 'Interplanetary Space Travel');
+
+  // Console.log(crewMember1 and crewMember2)
+
+console.log(crewMember1)
+console.log(crewMember2)
+console.log(mav)
+console.log(hermes)
 
 
 
